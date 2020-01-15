@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Explorer</title>
+</head>
+<body>
+<h2>CSS Explorer: Flexbox</h2>
+<div class="main__content">
+  <div class="main__content--grid">
+    <div class="main__content--grid-container"
+         [style.flex-direction]="flexDirection"
+         [style.justify-content]="justifyContent"
+         [style.align-items]="alignItems"
+    >
+      <div class="grid__container--element" [style.flex]="flex ? '1' : '' "
+      >
+        <span>1</span>
+      </div>
+      <div class="grid__container--element" [style.flex]="flex ? '1' : '' "
+      >
+        <span>2</span>
+      </div>
+      <div class="grid__container--element" [style.flex]="flex ? '1' : '' "
+      >
+        <span>3</span>
+      </div>
+      <div class="grid__container--element" [style.flex]="flex ? '1' : '' "
+      >
+        <span>4</span>
+      </div>
+    </div>
+  </div>
+  <div class="main__content--detail">
+    <form class="main__content--detail-picker">
+      <div class="options__row">
+        <strong>flex-direction:</strong>
+        <div class="radio__inputs">
+          <div class="radio__input">
+            <label>
+              <input type="radio" aria-hidden="true" tabindex="-1" name="flexDirection" [(ngModel)]="flexDirection"
+                     value="row">row
+            </label>
+          </div>
+          <div class="radio__input">
+            <label>
+              <input type="radio" aria-hidden="true" tabindex="-1" name="flexDirection" [(ngModel)]="flexDirection"
+                     value="column">
+              column
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="options__row">
+        <strong>justify-content</strong>
+        <div class="radio__inputs">
+          <div class="radio__input">
+            <label>
+              <input id="flex-start" type="radio" aria-hidden="true" tabindex="-1" name="justifyContent"
+                     [(ngModel)]="justifyContent"
+                     value="flex-start">
+              flex-start</label>
+          </div>
+          <div class="radio__input">
+            <label>
+              <input type="radio" aria-hidden="true" tabindex="-1" name="justifyContent" [(ngModel)]="justifyContent"
+                     value="flex-end">
+              flex-end
+            </label>
+          </div>
+
+          <div class="radio__input">
+            <label>
+              <input type="radio" aria-hidden="true" tabindex="-1" name="justifyContent" [(ngModel)]="justifyContent"
+                     value="center"/>
+              center
+            </label>
+          </div>
+
+          <div class="radio__input">
+            <label>
+
+              <input type="radio" aria-hidden="true" tabindex="-1" name="justifyContent" [(ngModel)]="justifyContent"
+                     value="space-between">
+
+              space-between
+            </label>
+          </div>
+
+          <div class="radio__input">
+            <label>
+              <input type="radio" aria-hidden="true" tabindex="-1" name="justifyContent" [(ngModel)]="justifyContent"
+                     value="space-around">
+              space-around
+            </label>
+          </div>
+
+          <div class="radio__input">
+            <label>
+              <input type="radio" aria-hidden="true" tabindex="-1" name="justifyContent" [(ngModel)]="justifyContent"
+                     value="space-evenly">
+              space-evenly
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="options__row">
+        <strong>align-items</strong>
+        <div class="radio__inputs">
+          <div class="radio__input">
+            <label>
+              <input type="radio" aria-hidden="true" tabindex="-1" name="alignItems" [(ngModel)]="alignItems"
+                     value="flex-start">
+              flex-start
+            </label>
+          </div>
+
+          <div class="radio__input">
+            <label>
+              <input type="radio" aria-hidden="true" tabindex="-1" name="alignItems" [(ngModel)]="alignItems"
+                     value="flex-end">
+              flex-end
+            </label>
+          </div>
+
+          <div class="radio__input">
+            <label> <input type="radio" aria-hidden="true" tabindex="-1" name="alignItems" [(ngModel)]="alignItems"
+                           value="center">
+              center
+            </label>
+          </div>
+          <div class="radio__input">
+            <label> <input type="radio" aria-hidden="true" tabindex="-1" name="alignItems" [(ngModel)]="alignItems"
+                           value="baseline">
+              baseline
+            </label>
+          </div>
+          <div class="radio__input">
+            <label> <input type="radio" aria-hidden="true" tabindex="-1" name="alignItems" [(ngModel)]="alignItems"
+                           value="stretch">
+              stretch
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="options__row">
+        <strong>flex</strong>
+        <div class="radio__inputs">
+          <div class="radio__input">
+            <label>
+              <input type="checkbox" aria-hidden="true" tabindex="-1" name="flex" [(ngModel)]="flex"
+                     value="1">
+              1
+            </label>
+          </div>
+        </div>
+      </div>
+    </form>
+    <pre>
+      {{ '{' }}
+        display:flex;
+        flex-direction: {{flexDirection}};
+        justify-content: {{justifyContent}};
+        align-items: {{alignItems}};
+      {{ '}' }}
+    </pre>
+  </div>
+</div>
+</body>
+</html>

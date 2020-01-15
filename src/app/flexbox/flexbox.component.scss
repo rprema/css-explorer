@@ -1,0 +1,138 @@
+h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.main__content {
+  margin: 60px 40px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .main__content--grid {
+    padding: 0px 20px;
+
+
+    .main__content--grid-container {
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      padding: 5px;
+      height: 400px;
+      border-radius: 10px;
+      background-image: url("src/assets/images/grid.jpg");
+      background-size: 10px;
+      margin-bottom: 30px;
+      display: flex;
+
+
+      .grid__container--element {
+        background: #24e4bc;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        color: #fff;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+      }
+
+    }
+
+    .select__checkbox {
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+
+      .checkbox {
+        color: #606266;
+        font-weight: 500;
+        cursor: pointer;
+        user-select: none;
+        overflow: hidden;
+        line-height: 1.5;
+        border-bottom: 1px solid #f3f3f3;
+
+        .checkbox__input {
+          cursor: pointer;
+          background-color: #fff;
+          margin: 0;
+
+        }
+
+        .checkbox__label {
+          line-height: 2rem;
+          font-size: 1rem;
+          padding-left: 4px;
+        }
+      }
+
+    }
+  }
+
+  .main__content--detail {
+    padding: 0px 20px;
+
+    .options__row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .radio__inputs {
+      margin-top: 10px;
+    }
+
+    .radio__input {
+      margin: 0 10px 0 0;
+      float: left;
+
+      label {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      input {
+        margin: 0 2px 0 0;
+      }
+    }
+  }
+}
+
+
+pre {
+  background: #4d5df0;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 1rem 0;
+
+}
+
+
+@media (max-width: 1000px) {
+  .main__content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .main__content {
+    margin: 10px;
+
+    .main__content--grid {
+      .main__content--grid-container {
+        .grid__container--element {
+          width: auto;
+          height: auto;
+        }
+
+      }
+    }
+  }
+}
